@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <title>AGENCIA DIGIT - Agence digital innovante</title>
+        <meta name="description" content="Agence digitale proposant création de sites, contenus, services SEO/SEA avec expertise innovante.">
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <meta name="robots" content="index, follow">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <header>
+            <img src="logo/logo.jpg" alt="Logo AGENCIA DIGIT">
+            <nav>
+                <a href="#container">Accueil</a>
+                <a href="#services">Services</a>
+                <a href="#portfolio">Porfolio</a>
+                <a href="#team">Équipe</a>
+                <a href="#blog">Blog</a>
+                
+            </nav>
+        </header>
+        <div id="container" style="position: relative; width: 420px; height: 180px; margin: auto;">
+  <h1 id="text" style="color: hsla(220, 92%, 10%, 1.00); font-size: 2rem; margin: 0; position: absolute; width: 100%; opacity: 1; transition: opacity 1s;">Bienvenue chez AGENCIA DIGIT</h1>
+  <img id="image" src="logo/fon.jpeg" alt="Image" 
+       style="position: absolute; top: 0; left: 0; border-radius: 10px; max-width: 800px; max-height: 220px; width: 100%; height: auto; opacity: 0; transition: opacity 1s; padding: auto;">
+</div>
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+  const fullText = "Bienvenue chez AGENCIA DIGIT";
+  const textElem = document.getElementById("text");
+  const imageElem = document.getElementById("image");
+  
+  // Fonctions écriture et effacement progressifs
+  function écrireTexte(element, texte, index = 0, callback) {
+    if (index <= texte.length) {
+      element.textContent = texte.substring(0, index);
+      setTimeout(() => écrireTexte(element, texte, index + 1, callback), 100);
+    } else if (callback) {
+      callback();
+    }
+  }
+
+  function effacerTexte(element, callback) {
+    let text = element.textContent;
+    let i = text.length;
+    const interval = setInterval(() => {
+      if (i === 0) {
+        clearInterval(interval);
+        if(callback) callback();
+      } else {
+        element.textContent = text.substring(0, i - 1);
+        i--;
+      }
+    }, 50);
+  }
+
+  // Affiche le texte avec effet, puis image avec fondu, en boucle
+  function cycle() {
+    // Texte visible, image cachée
+    textElem.style.opacity = 1;
+    imageElem.style.opacity = 0;
+
+    écrireTexte(textElem, fullText, 0, () => {
+      setTimeout(() => {
+        effacerTexte(textElem, () => {
+          // Fondu texte-out, image-in
+          textElem.style.opacity = 0;
+          imageElem.style.opacity = 1;
+
+          // Puis attendre 3 secondes avec image visible
+          setTimeout(() => {
+            // Fondu image-out, texte-in et recommencer cycle
+            imageElem.style.opacity = 0;
+            textElem.style.opacity = 5;
+
+            setTimeout(cycle, 2000); // après transition 2s recommence
+          }, 3000);
+        });
+      }, 3000); // délai après écriture complète
+    });
+  }
+
+  cycle();
+});
+</script>
+       <h3 class="slo">Votre partenaire en marketing digital innovant.</h3>
+       <section class="propos">
+  <p class="exp">AGENCIA DIGIT est une agence de digitale spécialisée dans la création de solutions web sur mesure, le marketing numérique et l'accompagnement digital. Notre équipe passionnée met son expertise au service de votre succès en ligne.</p>
+</section>
+        <main>
+            <section id="services">
+                <h2>Nos services</h2>
+                <div class="services-grid">
+                    <div class="service-item">
+                        <h3>Création et hebergement de sites web</h3>
+                        <p>Conception de sites web sur mesure, adaptés à vos besoin, avec hebergement performant et sécurisé</p>
+                        <a href="site.html" style="width: fit-content; justify-content: center; color: white; background-color: green; border-radius: 8px; text-align: center; margin: 15px; font-weight: 700; padding: 12px 28px; text-decoration: none;">VISITER</a>
+                    </div>
+                    <div class="service-item">
+                        <h3>Création de contenus pour entreprises</h3>
+                        <p>Rédaction professionnelle, contenus optimisés SEO, articles de blog, newsletters et plus...</p>
+                        <a href="contenus.html" style="width: fit-content; justify-content: center; color: white; background-color: green; border-radius: 8px; text-align: center; margin: 15px; font-weight: 700; padding: 12px 28px; text-decoration: none;">VISITER</a>
+                    </div>
+                    <div class="service-item">
+                        <h3>services SEO/SEA</h3>
+                        <p>Optimisation de votre référencement naturel et campagne publicitaires ciblées avec suivi dédié.</p>
+                        <a href="seo_sea.html" style="width: fit-content; box-shadow: 0 10px 40px; justify-content: center; color: white; background-color: green; border-radius: 8px; text-align: center; margin: 15px; font-weight: 700; padding: 12px 28px; text-decoration: none;">VISITER</a>
+                    </div>
+                </div>
+            </section>
+
+            <section id="portfolio">
+                <h2>Notre portfolio</h2>
+                <div class="portfolio-list">
+                    <figure class="portfolio-item">
+                        <img src="logo/contenu2.png" alt="" style="height: 60px; width: 60px;border-radius: 30px;">
+                        <figcaption>site e-commerce B2B pour DEV BEAUTY</figcaption>
+                    </figure>
+                    <figure class="portfolio-item">
+                        <img src="logo/vitrine.jpg" alt="" style="height: 60px; width: 60px; border-radius: 30px;">
+                        <figcaption>Refonte site vitrine pour société </figcaption>
+                    </figure>
+                    <figure class="portfolio-item">
+                        <img src="logo/seo2.jpg" alt="" style="width: 60px; height: 60px; border-radius: 30px;">
+                        <figcaption>Plateforme de marketing digital pour client CHRONO DIGITAL </figcaption>
+                    </figure>
+                </div>
+            </section>
+
+            <section id="team">
+                <h2>Notre équipe</h2>
+                <div class="team-list">
+                    <div class="team-member">
+                        <img src="logo/ktr.png" alt="">
+                        <h4>Raël Kemeze</h4>
+                        <p>Chef de projet, Consultant SEO et programmeur web</p>
+                    </div>
+                    <div class="team-member">
+                        <img src="logo/dev.jpg" alt="">
+                        <h4>Silvain Fossi</h4>
+                        <p>developpeur et UI/UX designer</p>
+                    </div>
+                    <div class="team-member">
+                        <img src="logo/Leonel.jpg" alt="">
+                        <h4>Leonel Fokou</h4>
+                        <p>Community manager</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="blog">
+                <h2>Notre Blog</h2>
+                <div class="blog-list">
+                    <article>
+                        <h4>5 conseils pour améliorer votre SEO en 2025</h4>
+                        <p>Découvrez les techniques efficaces et tendances à adapter dès maintenant pour booster votre référencement naturel</p>
+                    </article>
+                    <article>
+                        <h4>Optimiser vos campagnes SEA: guide pratique</h4>
+                        <p>Apprenez comment tirer le meilleur parti de vos annonces avec guide complet et illustré.</p>
+                    </article>
+                    <article>
+                      <h4>Presenter votre entreprise</h4>
+                    <p>Obtenir un site sur mesure hébergé et sécurisé pour vous</p>
+                    </article>
+                </div>
+            </section>
+            <a style="width: 20px; height: 15px; transition: 0.3s ease; border: 5px solid green; 
+               border-radius: 20px; margin-left: 0; text-decoration: none; background-color: green;" 
+               href="https://wa.me/681847666" tarSget="_blank" arial-label="Facebook">Contactez-nous</a>
+            <div class="social-links">
+          <a href="https://www.facebook.com/#" tarSget="_blank" arial-label="Facebook">
+            <img src="logo/face.jpg" alt="Facebook"/>
+          </a>
+
+          <a href="https://wa.me/681847666" target="_blank" arial-label="whatsApp">
+            <img src="logo/wh.jpg" alt="whatsApp"/>
+          </a>
+
+          <a href="https://www.linkedin.com/in/#" target="_blank" arial-label="LinkedIn">
+            <img src="logo/lind.jpg" alt="LinkedIn"/>
+          </a>
+          </a>
+          <a href="https://www.telegrame.com/#">
+            <img src="logo/telegram.png" alt="telegram">
+          </a>
+          <a href="https://www.tiktok.com/#">
+            <img src="logo/tiktok.jpg" alt="tiktok">
+          </a>
+        </div>
+        </main>
+
+
+        <footer>
+            &copy; 2025 AGENCIA DIGIT - Tous droits reservés
+        </footer>
+    </body>
+</html>

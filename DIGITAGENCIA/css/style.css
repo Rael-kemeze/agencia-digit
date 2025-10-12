@@ -1,0 +1,233 @@
+:root{
+    --bleu-turquoise: #0e7af5;
+    --bleu-sombre: #130686;
+    --noir-tech: #111319;
+    --gris-clair: #f3f7f9;
+    --text-principal: #222;
+    --text-secondaire: #555;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--gris-clair);
+    color: var(--text-principal);
+    line-height: 1.6;
+}
+
+header{
+    background-color: var(--noir-tech);
+    color: white;
+    padding: 12px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header img{
+    height: 70px;
+    width: 70;
+    border-radius: 20px;
+}
+
+nav a{
+    color: white;
+    text-decoration: none;
+    margin-left: 24px;
+    font-weight: 600;
+    font-size: 1.05rem;
+    transition: 0.3s ease;
+}
+
+nav a:hover{
+    color: var(--bleu-turquoise);
+}
+
+main{
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 24px;
+}
+
+section{
+    margin-bottom: 60px;
+    background: white;
+    border-radius: 16px;
+    padding: 32px 36px;
+    box-shadow: 0 12px;
+}
+
+h2{
+    color: var(--bleu-turquoise);
+    margin-bottom: 24px;
+    font-weight: 700;
+    border-bottom: 2px solid var(--bleu-sombre);
+    padding-bottom: 8px;
+    border: #111319;
+}
+
+
+.services-grid{
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.service-item{
+    flex: 1 1 30%;
+    background-color: var(--gris-clair);
+    border-radius: 14px;
+    padding: 22px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+    transition: box-shadow 0.4s ease;
+}
+
+.service-item:hover{
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.12);
+}
+
+.service-item h3{
+    color: var(--bleu-sombre);
+    margin-bottom: 14px;
+    background-color: whitesmoke;
+    border-radius: 15px;
+}
+
+.service-item p{
+    color: var(--text-secondaire);
+    font-size: 1rem;
+    line-height: 1.4;
+}
+.service-item h3:hover{
+    box-shadow: 0 10px 40px rgba(17, 0, 244, 0.12);
+    color: var(--text-principal);
+}
+
+.porfolio-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+}
+
+.porfolio-item{
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6);
+    background-color: var(--gris-clair);
+}
+
+.porfolio-item img{
+    width: 100%;
+    display: block;
+}
+
+.porfolio-item figcaption{
+    padding: 14px 18px;
+    font-weight: 600;
+    color: var(--bleu-sombre);
+    text-align: center;
+}
+
+.team-list{
+    display: flex;
+    gap: 28px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.team-member{
+    background: var(--gris-clair);
+    border-radius: 14px;
+    padding: 22px;
+    text-align: center;
+    flex: 0 0 220px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+}
+
+.team-member img{
+    border-radius: 99px;
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    margin-bottom: 12px;
+}
+
+.team-member h4{
+    margin-bottom: 6px;
+    color: var(--bleu-sombre);
+}
+
+.team-member p{
+    color: var(--text-secondaire);
+    font-size: 0.9rem;
+}
+
+.blog-list article{
+    margin-bottom: 24px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 18px;
+}
+
+.blog-list article h4{
+    color: var(--bleu-sombre);
+    margin-bottom: 6px;
+}
+
+.blog-list article p{
+    color: var(--text-secondaire);
+    font-size: 0.95rem;
+}
+
+
+.social-links{
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    margin: 24px 0;
+}
+
+.social-links a img{
+    width: 28px;
+    height: 28px;
+    transition: transform 0.3s ease;
+    border-radius: 30px;
+}
+
+.social-links a:hover img, .social-links a:focus img{
+    transform: scale(1.2);
+}
+
+div a{
+    transition: blue 0.3s ease;
+}
+a{
+    border: none;
+    border-radius: 30px;
+    color: aliceblue;
+}
+
+footer{
+    text-align: center;
+    background-color: var(--noir-tech);
+    color: var(--bleu-turquoise);
+    height: auto;
+}
+
+@media(max-whidth: 900px) {
+    .services-grid{
+        flex-direction: column;
+    }
+    .team-list{
+        flex-direction: column;
+        align-items: center;
+    }
+}

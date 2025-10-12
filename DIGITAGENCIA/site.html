@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <title> Création & hébergement de site - AGENCIA DIGIT</title>
+        <meta name="description" content="Agence digitale proposant création de sites, contenus, services SEO/SEA avec expertise innovante.">
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <meta name="robots" content="index, follow">
+        <link rel="stylesheet" href="css/site.css">
+    </head>
+    <body>
+        <header>
+            <img src="logo/logo.jpg" alt="Logo AGENCIA DIGIT">
+            <nav>
+                <a href="index.html">Accueil</a>
+                <a href="contenus.html">Création_contenus</a>
+                <a href="seo_sea.html">Services SEO/SEA</a>
+            </nav>
+        </header>
+            <section class="slideshow">
+                <img src="logo/web-design.jpg" alt="marketing web" class="slide active"/>
+                <img src="logo/ecom.png" alt="programmation web" class="slide"/>
+                <img src="logo/vitrine.jpg" alt="programmation web" class="slide"/>
+            </section>
+
+             <script>
+                const slides = document.addEventListener("DOMContentLoaded", function(){
+                    const slides = document.querySelectorAll(".slide");
+                    let current = 0;
+
+                function showSlide(index){
+                    slides.forEach((slide, i) => {
+                        slide.classList.toggle("active", i === index);
+                    });
+                }
+
+                setInterval(() => {
+                    current = (current + 1) % slides.length;
+                    showSlide(current);
+                    }, 4000); // change d'image tous les 4 secondes
+                });
+            </script>
+             <h3 class="describe">AGENCIA DIGIT vous accompagne pour créer un site web moderne, fonctionnel et efficace, parfaitement adapté à vos besoin et à votre image</h3>
+        <main>
+            <h1>Création & hebergement de sites web</h1>
+            <div class="site-types">
+
+                <div class="site-card">
+                    <img src="logo/vitrine.jpg" alt="Site vitrine professionnel">
+                    <h3>Site vitrine professionnel</h3>
+                    <p>Présentez votre entreprise avec un site clair, responsive et élégant pour attirer vos clients.</p>
+                    <li style="margin: 5px;"><strong>Design personnalisé</strong></li>
+                    <li style="margin: 5px;"><strong>5 pages incluent</strong></li>
+                    <a class="btn-whatsapp" href="https://wa.me/681847666?text=Bonjour%2C%20je%20souhaite%20commander%20un%20site%20vitrine%20chez%20AGENCIA%20DIGIT" target="_blank" rel="noopener">Commander via whatsApp</a>
+                </div>
+
+                <div class="site-card">
+                      <img src="logo/ecom.png" alt="Site e-commerce">
+                    <h3>Site E-commerce</h3>
+                    <p>Lancez votre boutique en ligne avec une plateforme performante et facile à gérer</p>
+                    <li style="margin: 5px;"><strong>Cathalogue jusqu'à 100 produits</strong></li>
+                    <li style="margin: 5px;"><strong>Interface d'administration</strong></li>
+                    <a class="btn-whatsapp" href="https://wa.me/681847666?text=Bonjour%2C%20je%20souhaite%20commander%20un%20site%20ecommerce%20chez%20AGENCIA%20DIGIT" target="_blank" rel="noopener">Commander via whatsApp</a>
+                </div>
+
+                <div class="site-card">
+                      <img src="logo/web-design.jpg" alt="Site sur mesure et plateforme">
+                    <h3>Site sur mesure & plateforme</h3>
+                    <p>Developper selon vos besoins spécifiques, avec fonctionnalités personnalisées et évolutives.</p>
+                    <li style="margin: 5px;"><strong>Developpement des fonctionnalités spécifiques</strong></li>
+                    <li style="margin: 5px;"><strong>Maintenance et support complet</strong></li>
+                    <a class="btn-whatsapp" href="https://wa.me/681847666?text=Bonjour%2C%20je%20souhaite%20commander%20site%20sur%20mesure%20chez%20AGENCIA%20DIGIT" target="_blank" rel="noopener">Commander via whatsApp</a>
+                </div>
+            </div>
+        </main>
+        <div class="social-links" style="text-align: center; justify-content: center; align-items: center; gap: 16px; padding: 4px; border-radius: 15px; display: flex;">
+          <a href="https://www.facebook.com/#" tarSget="_blank" arial-label="Facebook">
+            <img src="logo/face.jpg" alt="Facebook" style="height: 28px; width: 28px; transition: transform 0.3s ease; border-radius: 30px;"/>
+          </a>
+
+          <a href="https://wa.me/681847666" target="_blank" arial-label="whatsApp" >
+            <img src="logo/wh.jpg" alt="whatsApp" style="height: 28px; width: 28px; transition: transform 0.3s ease; border-radius: 30px;"/>
+          </a>
+
+          <a href="https://www.linkedin.com/in/#" target="_blank" arial-label="LinkedIn">
+            <img src="logo/lind.jpg" alt="LinkedIn" style="height: 28px; width: 28px; transition: transform 0.3s ease; border-radius: 30px;"/>
+          </a>
+          </a>
+          <a href="https://www.telegrame.com/#" target="_blank" aria-label="telegram">
+            <img src="logo/telegram.png" alt="telegram" style="width: 28px; height: 28px; transition: transform 0.3s ease; border-radius: 30px;">
+          </a>
+          <a href="https://www.tiktok.com/#" target="_blank" aria-label="tiktok">
+            <img src="logo/tiktok.jpg" alt="tiktok" style="height: 28px; width: 28px; transition: transform 0.3s ease; border-radius: 30px;">
+          </a>
+        </div>
+        <footer>
+            &copy; 2025 AGENCIA DIGIT - Tous droits reservés
+        </footer>
+    </body>
+</html>

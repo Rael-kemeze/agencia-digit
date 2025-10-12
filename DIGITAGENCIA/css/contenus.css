@@ -1,0 +1,205 @@
+:root{
+    --bleu-turquoise: #0e7af5;
+    --bleu-sombre: #130686;
+    --noir-tech: #111319;
+    --gris-clair: #f3f7f9;
+    --text-principal: #222;
+    --text-secondaire: #555;
+}
+
+body{
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--gris-clair);
+    color: var(--text-principal);
+    line-height: 1.6;
+}
+
+header{
+    background-color: var(--noir-tech);
+    color: white;
+    padding: 12px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+header img{
+    height: 70px;
+    width: 70px;
+    border-radius: 20px;
+}
+
+nav a{
+    color: white;
+    margin-left: 24px;
+    font-weight: 600;
+    font-size: 1.05rem;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+nav a:hover{
+     color: var(--bleu-turquoise);
+}
+
+main{
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 24px;
+}
+
+#description{
+    background: white;
+    padding: 24px 32px;
+    border-radius: 14px;
+    box-shadow: 0 10px;
+    font-size: 1.15rem;
+    margin-bottom: 40px;
+    color: var(--text-secondaire);
+    text-align: center;
+}
+
+
+.slideshow{
+    position: relative;
+    width: 100%;
+    max-height: 350px;
+    overflow: hidden;
+    border-radius: 20px;
+    margin-bottom: 48px;
+}
+
+.slides{
+    display: flex;
+    width: 400%;
+    animation: slideAnim 16s infinite;
+}
+
+.slides img{
+    width: 25%;
+    height: 350px;
+    object-fit: cover;
+    user-select: none;
+    border-radius: 10px;
+}
+
+@keyframes slideAnim{
+    0% {transform: translateX(0);}
+    20% {transform: translateX(0);}
+    25% {transform: translateX(-25%);}
+    45% {transform: translateX(-25%);}
+    50% {transform: translateX(-50%);}
+    70% {transform: translateX(-50%);}
+    75% {transform: translateX(-75%);}
+    95% {transform: translateX(-75%);}
+    100% {transform: translateX(0);}
+}
+
+section.content-types{
+    background: white;
+    margin-bottom: 36px;
+    padding: 22px 28px;
+    border-radius: 14px;
+    box-shadow: 0 8px 36px;
+}
+
+section.content-type h2{
+    color: var(--bleu-turquoise);
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+section.content-type > div{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 28px;
+    justify-content: space-between;
+}
+
+article.content-item{
+    flex: 1 1 45%;
+    max-width: 48%;
+    background: var(--gris-clair);
+    border-radius: 12px;
+    padding: 18px;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.07);
+}
+
+article.content-item iframe{
+    width: 100%;
+    aspect-ratio: 16/9;
+    border-radius: 12px;
+    margin-bottom: 12px;
+}
+
+article.content-item h3{
+    margin-bottom: 10px;
+    color: var(--text-secondaire);
+}
+.content-item:hover{
+    box-shadow: 0px 12px 40px;
+    background-color: wheat;
+}
+
+.btn-whatsapp{
+    background-color: #25d366;
+    color: white;
+    font-weight: 700;
+    padding: 10px 24px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 1rem;
+    box-shadow: 0 6px 16px rgba(37, 211, 102, 0.7);
+    transition: background-color 0.3s ease;
+    user-select: none;
+    display: inline-block;
+}
+
+.btn-whatsapp:hover{
+    background-color: #1ebe57;
+}
+
+
+.social-links{
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    margin: 24px 0;
+}
+
+.social-links a img{
+    width: 28px;
+    height: 28px;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.social-links a:hover img, .social-links a:focus img{
+    transform: scale(1.2);
+}
+a{
+    border: none;
+    border-radius: none;
+    color: aliceblue;
+}
+
+
+footer{
+    text-align: center;
+    background-color: var(--noir-tech);
+    color: var(--bleu-turquoise);
+    height: auto;
+}
+
+@media(max-widht: 900px) {
+    article.content-item{
+        max-width: 100%;
+    }
+    section.content-type > div {
+        justify-content: center;
+    }
+}

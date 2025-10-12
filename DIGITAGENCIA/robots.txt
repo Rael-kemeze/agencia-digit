@@ -1,0 +1,8 @@
+user-agent: *
+Disallow: /admin/
+Disallow: /private/
+
+Allow: /
+
+Sitemap:
+https://www.agenciadigit.com/sitemap.xml
